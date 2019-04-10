@@ -6,6 +6,7 @@ import travel from './travel.jpg';
 
 //importing the bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
+import './App.css';
 
 import Home from './components/Home'
 import Converter from './components/Converter'
@@ -15,7 +16,7 @@ class App extends Component {
     return (
       
       <Router>
-        <div className="container">
+        <div className="container" style={{marginBottom:'50px'}}>
 
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             
