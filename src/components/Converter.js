@@ -85,17 +85,17 @@ class Converter extends Component{
 					break;
 					
 				case " Great Britain Pounds":
-                    ConvertedUnitPrice_Out=ConvertedUnitPrice_In/USDGBP;
+                    ConvertedUnitPrice_Out=(ConvertedUnitPrice_In/USDLKR)*USDGBP;
                     this.setState({outAmount:ConvertedUnitPrice_Out});
 					break;
 					
 				case " Euro":
-                    ConvertedUnitPrice_Out=ConvertedUnitPrice_In/USDEUR;
+                    ConvertedUnitPrice_Out=(ConvertedUnitPrice_In/USDLKR)*USDEUR;
                     this.setState({outAmount:ConvertedUnitPrice_Out});
 					break;
 				
                 case " Australian Dollars":
-                    ConvertedUnitPrice_Out=ConvertedUnitPrice_In/USDAUD;
+                    ConvertedUnitPrice_Out=(ConvertedUnitPrice_In/USDLKR)*USDAUD;   
                     this.setState({outAmount:ConvertedUnitPrice_Out});
                     break;
 	
@@ -335,7 +335,8 @@ class Converter extends Component{
                                         name='outAmount'
                                         value={this.state.outAmount}
                                         onChange={this.onValueChange} 
-                                        disabled/>
+                                        disabled
+                                    />
                                 </div>
                             </div>               
                     </div>
