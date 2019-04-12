@@ -54,7 +54,7 @@ class Converter extends Component{
     async onCalculate(e){
         e.preventDefault();
 
-        await fetch('http://www.apilayer.net/api/live?access_key=ad22bd4f0a8c094965e4433ad875e948&currencies=AUD,EUR,GBP,LKR')
+        await fetch('https://www.apilayer.net/api/live?access_key=ad22bd4f0a8c094965e4433ad875e948&currencies=AUD,EUR,GBP,LKR')
         .then(res => res.json())
         .then(data => this.setState({currencyRate:data.quotes}));
 
